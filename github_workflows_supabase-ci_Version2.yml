@@ -1,0 +1,25 @@
+name: Supabase Backend CI
+
+on:
+  push:
+    paths:
+      - "supabase/**"
+      - ".github/workflows/supabase-ci.yml"
+  pull_request:
+    paths:
+      - "supabase/**"
+
+jobs:
+  supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Start Supabase
+        run: supabase start
+      - name: Run DB migrations
+        run: supabase db push
+      - name: Run Deno tests
+        run: supabase functions test --all

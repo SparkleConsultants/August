@@ -1,0 +1,29 @@
+{
+  "name": "adir-transport",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "@tanstack/react-query": "^5.56.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}
